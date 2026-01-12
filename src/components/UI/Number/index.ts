@@ -1,20 +1,15 @@
 // Main component exports
-export { AnimatedNumber } from './components/AnimatedNumber';
+export { Number } from './Number';
 export { SimpleAnimatedNumber } from './components/SimpleAnimatedNumber';
 
 // Type exports
 export type {
-  AnimatedNumberProps,
   AnimationType,
-  FormattedNumberParts,
   NumberFormat,
   NumberType,
-  FontSize,
-  FontWeight
-} from './types';
+} from './Number';
 
 // Utility exports
-export { getVariants } from './utils/animationVariants';
-export { formatNumber, parseFormattedNumber } from './utils/formatters';
-export { formatNumberValue, formatShort, formatToSignificantDigits } from './utils/numberFormatters';
-    
+export { formatNumber } from './util/formatNumber';
+export { parseFormattedNumber } from './util/parseFormattedNumber';
+export { getVariants } from './util/getAnimationVariants';

@@ -11,7 +11,7 @@ export type AnimationType = 'flip' | 'slide' | 'fade' | 'none';
 // Returns: The variants for the animation.
 
 const commonTransition = (duration: number, delay: number) => ({
-  type: 'spring',
+  type: 'spring' as const,
   stiffness: 200,
   damping: 20,
   bounce: 0.5,

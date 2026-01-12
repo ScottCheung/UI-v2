@@ -24,7 +24,7 @@ interface RadialChartProps {
   showLegend?: boolean;
   customTooltip?: React.ReactElement | ((props: any) => React.ReactElement);
   // More props can be added for customization, e.g., startAngle, endAngle, innerRadius, outerRadius
-  height?: string | number; // Allow custom height
+  height?: number | `${number}%`; // Allow custom height
   startAngle?: number; // Added startAngle
   endAngle?: number; // Added endAngle
   innerRadius?: string | number; // Added innerRadius
@@ -121,7 +121,7 @@ export const RadialChart: React.FC<RadialChartProps> = ({
             position: 'insideStart',
             fill: '#fff',
             fontSize: '9px',
-            formatter: (value: number) => value.toLocaleString(),
+            formatter: (value: any) => typeof value === 'number' ? value.toLocaleString() : String(value),
           }}
           background={{ fill: '#f0f0f0' }}
           dataKey={valueKey as string}
@@ -140,12 +140,6 @@ export const RadialChart: React.FC<RadialChartProps> = ({
             verticalAlign='middle'
             align='right'
             wrapperStyle={{ fontSize: '12px' }}
-            payload={processedData.map((item) => ({
-              value: item[nameKey!],
-              type: 'circle',
-              id: item[nameKey!],
-              color: item.originalFill,
-            }))}
           />
         )}
         <Tooltip

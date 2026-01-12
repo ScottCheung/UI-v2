@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion as m } from 'framer-motion';
 import { Number } from '../Number/Number';
-import { AutoContainer } from '../Container/AutoContainer';
 
 export interface ChartTooltipPropsItem {
   isShortFormat?: boolean;
@@ -89,9 +88,8 @@ export const ChartTooltip: React.FC<ChartTooltipProps> = ({
                       value={item.value}
                       duration={0.2}
                       {...ValueProps}
-                      className={`font-medium text-xs  ${
-                        !itemName || itemName.trim() === '' ? 'ml-auto' : ''
-                      }`}
+                      className={`font-medium text-xs  ${!itemName || itemName.trim() === '' ? 'ml-auto' : ''
+                        }`}
                     />
                   </div>
                 </div>

@@ -1,8 +1,19 @@
 import { motion } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
-import { AnimatedNumberProps } from '../types';
 import { formatNumberValue } from '../utils/numberFormatters';
+
+interface AnimatedNumberProps {
+  value: number;
+  useShortFormat?: boolean;
+  maxSignificantDigits?: number;
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  fontWeight?: 'normal' | 'medium' | 'semibold' | 'bold';
+  textColor?: string;
+  animate?: boolean;
+  className?: string;
+  style?: React.CSSProperties;
+}
 
 /**
  * Simple animated number component that displays a number with animation
