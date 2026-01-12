@@ -6,6 +6,7 @@ import {
     CardDescription,
     CardContent,
 } from '@/components/UI/card';
+import { H1 } from '@/components/UI/text/typography';
 import { Chart } from '@/components/UI/Chart';
 
 const data = [
@@ -33,7 +34,8 @@ export function ChartCard() {
                     Visualizing data with Recharts wrapper.
                 </CardDescription>
             </CardHeader>
-            <CardContent className="grid gap-6">
+
+            <CardContent className="grid grid-cols-1 md:grid-cols-2 gap-6 gap-y-32">
                 <div className="h-[200px] w-full">
                     <Chart
                         type="area"

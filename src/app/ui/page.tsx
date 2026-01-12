@@ -74,7 +74,6 @@ export default function UIShowcasePage() {
                     <StaticToastCard />
                     <AccordionCard />
                     <TableCard />
-                    <IconSelectorCard />
                     <BrandCard />
                     <SkeletonCard />
                     <AvatarCard />
@@ -83,8 +82,12 @@ export default function UIShowcasePage() {
                     <IconCard />
 
                 </WaterfallLayout>
-                <ChartCard />
-                <SVGAnimationCard />
+                <div className='grid gap-6 mt-6'>
+                    <H1>Charts</H1>
+                    <ChartCard />
+                    <H1>SVG Animation</H1>
+                    <SVGAnimationCard /></div>
+
                 <Toaster />
             </div>
         </ThemeProvider>

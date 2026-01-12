@@ -18,19 +18,19 @@ export function SVGAnimationCard() {
                 </CardDescription>
             </CardHeader>
             <CardContent>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
-                    <div className="border rounded-lg p-4 flex justify-center bg-muted/20">
-                        <SVGAnimation icon="success" className="transform scale-75" />
-                    </div>
-                    <div className="border rounded-lg p-4 flex justify-center bg-muted/20">
-                        <SVGAnimation icon="error" className="transform scale-75" />
-                    </div>
-                    <div className="border rounded-lg p-4 flex justify-center bg-muted/20">
-                        <SVGAnimation icon="warning" className="transform scale-75" />
-                    </div>
-                    <div className="border rounded-lg p-4 flex justify-center bg-muted/20">
-                        <SVGAnimation icon="info" className="transform scale-75" />
-                    </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                    <Card className="bg-background">
+                        <SVGAnimation icon="success" className="transform scale-50" />
+                    </Card>
+                    <Card className="bg-background">
+                        <SVGAnimation icon="error" className="transform scale-50" />
+                    </Card>
+                    <Card className="bg-background">
+                        <SVGAnimation icon="warning" className="transform scale-50" />
+                    </Card>
+                    <Card className="bg-background">
+                        <SVGAnimation icon="info" className="transform scale-50" />
+                    </Card>
                 </div>
             </CardContent>
         </Card>
